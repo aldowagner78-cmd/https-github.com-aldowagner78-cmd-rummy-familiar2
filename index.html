@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./icons/icon-192.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#0F3E26" />
+    <meta name="description" content="Burako & Rummy Family Club - El juego de mesa clásico para toda la familia." />
+    <link rel="apple-touch-icon" href="./icons/icon-192.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <title>Burako & Rummy - Family Club</title>
+  </head>
+  <body class="bg-[#121212] text-white select-none overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Register service worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('Service Worker registrado con éxito:', reg.scope))
+            .catch(err => console.error('Fallo al registrar Service Worker:', err));
+        });
+      }
+    </script>
+  </body>
+</html>
