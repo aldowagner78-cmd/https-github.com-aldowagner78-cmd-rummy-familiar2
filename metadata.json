@@ -1,0 +1,6 @@
+{
+  "name": "Burako & Rummy",
+  "description": "Un juego de mesa clásico de Rummy y Burako de alta fidelidad, diseñado para jugar en familia desde cualquier país con una experiencia táctil física realista.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
